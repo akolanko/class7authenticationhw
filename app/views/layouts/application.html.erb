@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Class7authentication</title>
+	  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<h1>
+					User Authentication
+				</h1>
+			</div>
+			<% if flash[:notice] %>
+				<%= flash[:notice] %>
+			<% end %>
+			<% if flash[:alert] %>
+				<%= flash[:alert] %>
+			<% end %>
+
+			<%= yield %>
+		</div>
+	</body>
+</html>
